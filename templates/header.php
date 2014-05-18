@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
+<!-- TODO - alterar esse link capturando o servidor -->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,3 +22,7 @@
   <body>
   	<div id="wrap">
   	<?php include 'templates/menu.php' ?>
+    <!-- verificar sessão e permissão-->
+    <?php include 'templates/menuadmin.php' ?>
+    <!-- verificar sessão e permissão-->
+    <?php include 'templates/menugestao.php' ?>

@@ -3,7 +3,7 @@
           <div class="container">
               <div class="col-md-8" id="mailing-form" >
               <h2>Receba as novidades do Beetle Escape!</h2>
-              <form action="/php/mail-list.php" method="post">
+              <form action="#" method="post">
               <div class="form-input mailing">
                   <label for="inputNome">Nome</label>
                   <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome"></input><br>              

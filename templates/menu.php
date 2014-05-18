@@ -25,9 +25,11 @@
 	          <li>
 	              <a href="#">FAQ</a>
 	          </li>
+	          <!-- colocar condicional se logado aqui com exibição de links de usuário caso logado-->
 	          <li>
 	              <a href="login.php">Login</a>
 	          </li>
 	          
 	      </ul>
+	 </div>
 	</div>
