@@ -2,6 +2,7 @@
       <div class="jumbotron footer">
           <div class="container">
               <div class="col-md-8" id="mailing-form" >
+              <!--
               <h2>Receba as novidades do Beetle Escape!</h2>
               <form action="#" method="post">
               <div class="form-input mailing">
@@ -13,6 +14,21 @@
                   <input type="email" class="form-control" id="inputNome" placeholder="Digite seu email"></input>              
               </div> 
               </form>
+              -->
+                <h2>Últimas novidades do Beetle Escape!</h2>
+                <div class="listanoticia">
+
+                  <dl class="dl-horizontal">
+                    <?php
+                      include 'restrito/conexao.php';
+                      $resultado = $conexao->query("SELECT titulo, autor, data, id FROM noticias ORDER BY data LIMIT 5");
+                      while ($linha = $resultado->fetch_assoc()){
+                        echo '<dt>' . $linha['data'] . '</dt>';
+                        echo '<dd> <a href="noticia.php?id=' . $linha['id'] . '">' . $linha['titulo'] .' por '. $linha['autor'] .' </a></dd>';
+                      }
+                    ?>
+                  </dl>
+                </div>
               </div>
               <div class="col-md-4">
                   <h3>Hijonoob Game Studios</h3><br>
