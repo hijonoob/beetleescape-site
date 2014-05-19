@@ -21,7 +21,7 @@
                   <dl class="dl-horizontal">
                     <?php
                       include 'restrito/conexao.php';
-                      $resultado = $conexao->query("SELECT titulo, autor, data, id FROM noticias ORDER BY data LIMIT 5");
+                      $resultado = $conexao->query("SELECT titulo, autor, data, id FROM noticias ORDER BY data DESC LIMIT 5");
                       while ($linha = $resultado->fetch_assoc()){
                         echo '<dt>' . $linha['data'] . '</dt>';
                         echo '<dd> <a href="noticia.php?id=' . $linha['id'] . '">' . $linha['titulo'] .' por '. $linha['autor'] .' </a></dd>';
