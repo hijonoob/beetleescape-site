@@ -5,32 +5,52 @@
       <?php
         include 'restrito/conexao.php';
         
-        if( isset( $_POST['logar'] ) ):
-          $uName = $_POST['uName']; 
-          $passW = $_POST['passw'];
-          // validar os dados
-          // inserir usuário no banco
-          
+        if( isset( $_POST['logar'] ) ) {
+          $usuario = trim(strip_tags($_POST['usuario'])); 
+          $senha = trim(strip_tags($_POST['senha']));
+          // validar captcha
           include_once $_SERVER['DOCUMENT_ROOT'] . '/beetleescape/securimage/securimage.php';
           $securimage = new Securimage();
           if ($securimage->check($_POST['captcha_code']) == false) {
+            // captcha errado
             echo "<div class='alert alert-info'> Captcha incorreto, favor tentar novamente. </div>";
-            //exit;
           } else {
-            echo "<div class='alert alert-info'> Tentando logar. </div>";
-          }
-        endif;
-      ?>
+            // captcha certo - verificar senha
+              if ($usuario=='' || $senha=='') {
+                echo "<div class='alert alert-info'> Usuário e senha devem ser preenchidos. </div>";
+              } else {
+                if ($sql = $conexao->prepare("SELECT senha, permissao FROM usuarios WHERE usuario = ?")) {
+                  $sql->bind_param('s', $usuario);
+                  $sql->execute();
+                  $sql->bind_result($senhacomparacao, $permissao);
+                  $sql->fetch();
+                  if ($senhacomparacao == ''){
+                    echo "<div class='alert alert-info'> Erro ao conectar, favor tentar novamente </div>"; // Usuário não encontrado
+                  } else {
+                      $senhacomp = crypt($senha, $senhacomparacao);
+                      if($senhacomparacao == $senhacomp) {
+                        echo "<div class='alert alert-info'> Senha confere. </div>";
+                        // TODO - criar sessão com usuario e permissao
+                      } else {
+                          echo "<div class='alert alert-info'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
 
+                      }
+                  }
+                  $sql->close();
+                }
+              }
+          }
+        }
+      ?>
       <div id="login">
           <form action="login.php" method="post">  
             <div class="form-input login-form" >
-                <label for="uName">Usuário</label>
-                <input name="uName" type="text" class="form-control" id="uName" placeholder="Digite seu nome de usuário"></input>
+                <label for="usuario">Usuário</label>
+                <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Digite seu nome de usuário"></input>
             </div>
             <div class="form-input login-form">
-                <label for="passw">Senha</label>
-                <input name="passw" type="password" class="form-control" id="passw" placeholder="Senha"></input><br>
+                <label for="senha">Senha</label>
+                <input name="senha" type="password" class="form-control" id="senha" placeholder="Senha"></input><br>
             </div>
             <div class="form-input login-form">
               <label for="captchainput">Digite o Captcha</label>
