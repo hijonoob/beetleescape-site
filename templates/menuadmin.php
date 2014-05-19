@@ -8,10 +8,6 @@
 	          <li>
 	              <a href="listausuario.php">Lista usuários</a>
 	          </li>
-	          <li>
-	              <a href="atualizausuario.php">Atualiza usuários</a>
-	          </li>
-	          
 	      </ul>
 	 </div>
 	</div>
