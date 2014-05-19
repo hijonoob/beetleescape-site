@@ -3,10 +3,10 @@
 	    <p class="navbar-brand">Gestão de conteúdo</p>
 	      <ul class="nav navbar-nav">
 	          <li>
-	              <a href="adicionausuario.php">Adicionar notícia</a>
+	              <a href="adicionanoticia.php">Adicionar notícia</a>
 	          </li>
 	          <li>
-	              <a href="listausuario.php">Lista notícias</a>
+	              <a href="listanoticia.php">Lista notícias</a>
 	          </li>
 	          
 	      </ul>
