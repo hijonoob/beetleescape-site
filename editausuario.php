@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checaadmin.php';
 ?>
-<!-- //TODO checar login e permissão 3 -->
 		  	<div class="container">
 			<h3> Editar usuário </h3>
 			

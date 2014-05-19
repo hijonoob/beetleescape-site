@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checagestor.php';
 ?>
-<!-- //TODO checar login e permissão 3 -->
 		  	<div class="container">
 			<h3> Criar nova notícia </h3>
 			
