@@ -43,7 +43,7 @@
 				<label for="texto"> Texto: </label>
 					<textarea class="form-control" name="texto" placeholder="texto da notícia"></textarea>
 
-				<input type="submit" name="criar" value="Criar novo usuário" class="btn btn-default" />	
+				<input type="submit" name="criar" value="Criar notícia" class="btn btn-default" />	
 			</form>		
 		</div>	
 
