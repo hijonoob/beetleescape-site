@@ -1,6 +1,7 @@
 <?php session_start(); ?>
 <?php include 'templates/header.php' ?>
 
+  <div class="container">
       <?php
         include 'restrito/conexao.php';
         
@@ -14,7 +15,7 @@
           $securimage = new Securimage();
           if ($securimage->check($_POST['captcha_code']) == false) {
             echo "<div class='alert alert-info'> Captcha incorreto, favor tentar novamente. </div>";
-            exit;
+            //exit;
           } else {
             echo "<div class='alert alert-info'> Tentando logar. </div>";
           }
@@ -43,4 +44,5 @@
             <button type="submit" name="logar" class="btn btn-default">Entrar</button> 
           </form>
       </div>
+  </div>
 <?php include 'templates/footer.php' ?>
