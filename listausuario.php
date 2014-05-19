@@ -25,7 +25,7 @@
 					echo '<td>' . $linha['usuario'] .'</td>';
 					echo '<td>' . $linha['permissao'] .'</td>';
 					echo '<td> <a href="editausuario.php?user='. $linha['usuario'].'">Editar</a></td>';
-					echo '<td> <a href="deletausuario.php?user='. $linha['usuario'].'">X</a></td>';
+					echo '<td> <a class="removeusuario" href="deletausuario.php?user='. $linha['usuario'].'">X</a></td>';
 					echo '</tr>';
 					$i++;
 
