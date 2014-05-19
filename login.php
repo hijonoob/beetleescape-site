@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php include 'templates/header.php' ?>
 
   <div class="container">
@@ -29,8 +28,10 @@
                   } else {
                       $senhacomp = crypt($senha, $senhacomparacao);
                       if($senhacomparacao == $senhacomp) {
-                        echo "<div class='alert alert-info'> Senha confere. </div>";
-                        // TODO - criar sessão com usuario e permissao
+                        // logado, cria as sessões
+                        $_SESSION['usuario']=$usuario;
+                        $_SESSION['permissao']=$permissao;
+                        location.reload();
                       } else {
                           echo "<div class='alert alert-info'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
 
@@ -41,6 +42,9 @@
               }
           }
         }
+      if(isset($_SESSION['permissao'])) {
+        echo "<div class='alert alert-info'>Você está logado </div>";
+      }
       ?>
       <div id="login">
           <form action="login.php" method="post">  

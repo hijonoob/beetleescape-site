@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,8 +22,15 @@
   </head>
   <body>
   	<div id="wrap">
-  	<?php include 'templates/menu.php' ?>
-    <!-- verificar sessão e permissão-->
-    <?php include 'templates/menuadmin.php' ?>
-    <!-- verificar sessão e permissão-->
-    <?php include 'templates/menugestao.php' ?>
+    <?php
+      include 'templates/menu.php';
+      if(isset($_SESSION['permissao'])) {
+          $permissao = $_SESSION['permissao'];
+          if($permissao > 2) {
+            include 'templates/menuadmin.php';
+          }
+          if ($permissao > 1) {
+            include 'templates/menugestao.php';
+          }
+      }
+    ?>
