@@ -29,6 +29,9 @@
                     ?>
                   </dl>
                 </div>
+                <div class="rss">
+                  <a href="rss.php">Assine nosso RSS</a>
+                </div>
               </div>
               <div class="col-md-4">
                   <h3>Hijonoob Game Studios</h3><br>
