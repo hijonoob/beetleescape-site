@@ -24,6 +24,8 @@
 						}
 
 						$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome,email,senha,permissao) VALUES (?, ?, ?, ?, ?)");
+						// criptografa a senha
+						$senha = crypt($senha);
 						$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
 						if ($param->execute()) {
 							echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
