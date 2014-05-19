@@ -10,10 +10,11 @@
 				include 'restrito/conexao.php';
 				$usuario = htmlspecialchars($_GET["user"]);
 				if($usuario){
-					if ($sql = $conexao->prepare("SELECT nome, usuario, email, permissao FROM usuarios WHERE usuario = ?")) {
+					if ($sql = $conexao->prepare("SELECT nome, email, permissao FROM usuarios WHERE usuario = ?")) {
 						$sql->bind_param('s', $usuario);
 						$sql->execute();
-						$sql->bind_result($nome, $usuario, $email, $permissao);
+						$sql->bind_result($nome, $email, $permissao);
+						$usuarioAntigo = $usuario;
 						$sql->fetch();
 						if ($nome == ''){
 							echo "<div class='alert alert-info'> Usuário não encontrado </div>";
@@ -23,11 +24,9 @@
 						$sql->close();
 					}
 				}
-
 				
 				if( isset( $_POST['editar'] ) ):
 					$usuario = $_POST['usuario'];
-					$usuarioAntigo = $_POST['usuario']; 
 					$nome = $_POST['nome'];
 					$email = $_POST['email'];
 					$permissao = $_POST['permissao'];
