@@ -11,12 +11,25 @@
 					$nome = $_POST['nome'];
 					$email = $_POST['email'];
 					$senha = $_POST['senha'];
+					$senhaconfirma = $_POST['senhaconfirma'];
 					$permissao = $_POST['permissao'];
 					
-					// validar os dados
-					// inserir usuário no banco
-					echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
-				
+					if ($usuario=='' || $nome=='' || $email=='' || $senha=='' || $senhaconfirma=='' || $permissao=='') {
+						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+					} else if (!$senha == $senhaconfirma){
+						echo "<div class='alert alert-info'> Senha de confirmação diferente da senha. </div>";
+					} else {
+						if (!is_numeric ($permissao) || $permissao > 3 || $permissao < 0){
+							$permissao=0;
+						}
+
+						$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome,email,senha,permissao) VALUES (?, ?, ?, ?, ?)");
+						$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
+						if ($param->execute()) {
+							echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
+							$param->close();
+						}
+					}
 				endif;
 			?>
 			

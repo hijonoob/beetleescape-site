@@ -2,6 +2,7 @@
 	  <div class="container">
 	    <a class="navbar-brand" href="index.php">Beetle Escape</a>
 	      <ul class="nav navbar-nav">
+	      <!--
 	          <li>
 	              <a href="#">Downloads</a>
 	          </li>
@@ -25,6 +26,8 @@
 	          <li>
 	              <a href="#">FAQ</a>
 	          </li>
+-->
+
 	          <!-- colocar condicional se logado aqui com exibição de links de usuário caso logado-->
 	          <li>
 	              <a href="login.php">Login</a>
