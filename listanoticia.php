@@ -22,7 +22,7 @@
 					while ($linha = $resultado->fetch_assoc()){
 						echo '<tr>';
 						echo '<td>' . $linha['id'] . '</td>'; // colocar número de repetição
-						echo '<td>' . $linha['titulo'] .'</td>';
+						echo '<td> <a href="noticia.php?id='. $linha['id'].'">' . $linha['titulo'] .'</a> </td>';
 						echo '<td>' . $linha['autor'] .'</td>';
 						echo '<td>' . $linha['data'] .'</td>';
 						echo '<td> <a href="editanoticia.php?id='. $linha['id'].'">Editar</a></td>';

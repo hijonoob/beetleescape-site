@@ -8,7 +8,7 @@
 			<?php
 				include 'restrito/conexao.php';
 				$id = htmlspecialchars($_GET["id"]);
-				if($usuario){
+				if($id){
 					if ($sql = $conexao->prepare("SELECT titulo, descricao, autor, data, texto FROM noticias WHERE id = ?")) {
 						$sql->bind_param('i', $id);
 						$sql->execute();
@@ -29,7 +29,7 @@
 					$descricao = $_POST['descricao'];
 					$autor = $_POST['autor'];
 					$data = $_POST['data'];
-					$texto = $_POST['texto'];
+					$texto = trim($_POST['texto']);
 					
 					if ($id=='' || $titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
 						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
@@ -56,7 +56,7 @@
 				<label for="data"> Data: </label>
 					<input type="text" placeholder="data da notícia" class="form-control" name="data" value=<?php echo "'". $data . "'"; ?> />
 				<label for="texto"> Texto: </label>
-					<textarea class="form-control" name="texto" placeholder="texto da notícia"> <?php echo $texto; ?> </textarea>
+					<textarea class="form-control" name="texto" placeholder="texto da notícia"><?php echo $texto; ?></textarea>
 
 				<input type="submit" name="editar" value="Editar notícia" class="btn btn-default" />	
 			</form>		
