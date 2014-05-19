@@ -22,5 +22,5 @@
 	              <a href="#">FAQ</a>
 	          </li>
 	          <li>
-	              <a href="#">Logout</a>
+	              <a href="logout.php">Logout</a>
 	          </li>

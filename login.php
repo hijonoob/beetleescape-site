@@ -31,7 +31,8 @@
                         // logado, cria as sessões
                         $_SESSION['usuario']=$usuario;
                         $_SESSION['permissao']=$permissao;
-                        location.reload();
+                        header('Location: login.php');
+                        exit;
                       } else {
                           echo "<div class='alert alert-info'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
 
