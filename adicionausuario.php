@@ -46,7 +46,12 @@
 				<label> Confirmar senha: </label>
 					<input type="password" placeholder="repetir senha" class="form-control" name="senhaconfirma" />
 				<label> Permissão: </label>
-					<input type="text" placeholder="permissão" class="form-control" name="permissao" />
+					<select class="form-control" name="permissao">
+					  <option value="0">Visualizador</option>
+					  <option value="1">Jogador</option>
+					  <option value="2">Gestor</option>
+					  <option value="3">Administrador</option>
+					</select>
 				<input type="submit" name="criar" value="Criar novo usuário" class="btn btn-default" />	
 			</form>		
 		</div>	

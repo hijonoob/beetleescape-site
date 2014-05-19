@@ -54,7 +54,12 @@
 				<label> E-mail: </label>
 				<input type="text" placeholder="e-mail" class="form-control" name="email" value=<?php echo "'". $email . "'"; ?>/>
 				<label> Permissão: </label>
-					<input type="text" placeholder="permissão" class="form-control" name="permissao" value=<?php echo "'". $permissao . "'"; ?> />
+					<select class="form-control" name="permissao">
+					  <option value="0" <?php if($permissao==0){ echo 'selected'; }  ?>>Visualizador</option>
+					  <option value="1" <?php if($permissao==1){ echo 'selected'; }  ?>>Jogador</option>
+					  <option value="2" <?php if($permissao==2){ echo 'selected'; }  ?>>Gestor</option>
+					  <option value="3" <?php if($permissao==3){ echo 'selected'; }  ?>>Administrador</option>
+					</select>
 				<input type="submit" name="editar" value="Editar usuário" class="btn btn-default" />	
 			</form>		
 		</div>	
