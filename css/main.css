@@ -61,20 +61,31 @@ input {
     margin-top: 20px;
 }
 
+.btn {
+    margin-top: 15px;
+}
+
 /* CONTRASTE */
 
 body.contraste,
 body.contraste .navbar,
 body.contraste .container,
-body.contraste .footer {
+body.contraste .footer,
+body.contraste .form-control {
     background: #000 !important;
     color: #fff !important;
 }
+
+body.contraste .form-control.error {
+    background: #111 !important;
+}
+
 body.contraste .navbar-default .navbar-brand,
 body.contraste .navbar-default .navbar-nav>li>a:hover,
 body.contraste .navbar-default .navbar-nav>li>a:focus,
 body.contraste .navbar-default .navbar-nav>li>a,
-body.contraste a {
+body.contraste a,
+body.contraste form label.error {
     color: #fff !important;
 }
 
@@ -116,4 +127,17 @@ body.contraste .rss_icon {
     font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+/* validação de formulários */
+
+form label.error {
+    color: #FF0000;
+    display: block;
+    margin: 0 0 10px 14px;
+    font-size: 0.9em;
+}
+
+.form-control.error {
+    background: #eee;
 }

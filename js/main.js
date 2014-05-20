@@ -32,3 +32,147 @@ jQuery(function() {
     return false;
   }
 });
+
+// Validação de formulários
+(function($,W,D)
+{
+    var validacao = {};
+
+    validacao.util =
+    {
+        setupFormValidation: function()
+        {
+            // formulário de adicionar usuários
+            $("#adicionausuario").validate({
+                rules: {
+                    usuario: "required",
+                    nome: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    senha: "required",
+                    senhaconfirma: {
+                      equalTo: "#senha"
+                    },
+
+                },
+                messages: {
+                    usuario: "Favor preencher o usuário",
+                    nome: "Favor preencher o nome completo",
+                    email: "Favor preencher com e-mail válido",
+                    senha: {
+                        required: "Favor preencher uma senha",
+                        minlength: "A senha precisa ter pelo menos 5 caracteres"
+                    },
+                    senhaconfirma: {
+                        required: "Favor preencher uma senha",
+                        equalTo: "Favor preencher a mesma senha que no campo senha"
+                    }
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+            // formulário de edição de usuários
+            $("#editausuario").validate({
+                rules: {
+                    usuario: "required",
+                    nome: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    }
+
+                },
+                messages: {
+                    usuario: "Favor preencher o usuário",
+                    nome: "Favor preencher o nome completo",
+                    email: "Favor preencher com e-mail válido"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+            // formulário de registro
+            $("#registro").validate({
+                rules: {
+                    usuario: "required",
+                    nome: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    senha: "required",
+                    senhaconfirma: {
+                      equalTo: "#senha"
+                    },
+
+                },
+                messages: {
+                    usuario: "Favor preencher o usuário",
+                    nome: "Favor preencher o nome completo",
+                    email: "Favor preencher com e-mail válido",
+                    senha: {
+                        required: "Favor preencher uma senha",
+                        minlength: "A senha precisa ter pelo menos 5 caracteres"
+                    },
+                    senhaconfirma: {
+                        required: "Favor preencher uma senha",
+                        equalTo: "Favor preencher a mesma senha que no campo senha"
+                    }
+                },
+            });
+            // formulário de adição de notícia
+            $("#adicionanoticia").validate({
+                rules: {
+                    id: "required",
+                    titulo: "required",
+                    descricao: "required",
+                    autor: "required",
+                    data: "required",
+                    texto: "required"
+                },
+                messages: {
+                    id: "Favor preencher o id da notícia",
+                    titulo: "Favor preencher o título da notícia",
+                    descricao: "Favor preencher a descrição da notícia",
+                    autor: "Favor preencher o autor da notícia",
+                    data: "Favor preencher a data da notícia",
+                    texto: "Favor preencher o corpo de texto da notícia"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+            // formulário de edição de notícia
+            $("#editanoticia").validate({
+                rules: {
+                    id: "required",
+                    titulo: "required",
+                    descricao: "required",
+                    autor: "required",
+                    data: "required",
+                    texto: "required"
+                },
+                messages: {
+                    id: "Favor preencher o id da notícia",
+                    titulo: "Favor preencher o título da notícia",
+                    descricao: "Favor preencher a descrição da notícia",
+                    autor: "Favor preencher o autor da notícia",
+                    data: "Favor preencher a data da notícia",
+                    texto: "Favor preencher o corpo de texto da notícia"
+                },
+                submitHandler: function(form) {
+                    form.submit();
+                }
+            });
+        }
+    }
+
+    //when the dom has loaded setup form validation rules
+    $(D).ready(function($) {
+        validacao.util.setupFormValidation();
+    });
+
+})(jQuery, window, document);

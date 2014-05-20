@@ -28,8 +28,8 @@
 			?>
 			
 			
-			<form action="" method="POST">
-				<label for="id"> Id (futuramente auto incremental no banco): </label>
+			<form action="" method="POST" id="adicionanoticia">
+				<label for="id"> Id: </label>
 					<input type="text" placeholder="id" class="form-control" name="id" autofocus />
 				<label for="titulo"> Título: </label>
 					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" />

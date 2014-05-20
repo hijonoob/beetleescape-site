@@ -43,8 +43,8 @@
 				endif;
 			?>
 
-			<form action="" method="POST">
-				<label for="id"> Id (futuramente auto incremental no banco): </label>
+			<form action="" method="POST" id="editanoticia">
+				<label for="id"> Id: </label>
 					<input type="text" placeholder="id" class="form-control" name="id" value=<?php echo "'". $id . "'"; ?> autofocus />
 				<label for="titulo"> Título: </label>
 					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" value=<?php echo "'". $titulo . "'"; ?> />

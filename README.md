@@ -55,13 +55,13 @@ Funcionalidades
 - Links com tecla de atalho para menu, conteúdo e rodapé
 - Regra de alto contraste - funcionalidade, cookie e CSS
 - Aplicação de tipos de alerta de acordo com ação (alert-success, alert-info, alert-warning e alert-danger)
+- Validação dos campos de todos os formulários
 
 
 Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [front] Máscara e validação dos campos de cada formulário
 - [front] Confirmação ao deletar usuário e notícias
 - [db] Transformar usuário em índice e único
 - [db] Verificar se usuário já existe ao incluir

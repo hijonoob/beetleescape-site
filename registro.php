@@ -32,7 +32,7 @@
 			?>
 			
 			
-			<form action="" method="POST">
+			<form action="" method="POST" id="registro">
 				<label> Usuário: </label>
 					<input type="text" placeholder="usuário" class="form-control" name="usuario" autofocus />
 				<label> Nome: </label>
@@ -40,7 +40,7 @@
 				<label> E-mail: </label>
 				<input type="text" placeholder="e-mail" class="form-control" name="email" />
 				<label> Senha: </label>
-					<input type="password" placeholder="senha" class="form-control" name="senha" />
+					<input type="password" placeholder="senha" class="form-control" name="senha" id="senha" />
 				<label> Confirmar senha: </label>
 					<input type="password" placeholder="repetir senha" class="form-control" name="senhaconfirma" />
 				<input type="submit" name="registra" value="Registrar usuário" class="btn btn-default" />	

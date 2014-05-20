@@ -46,7 +46,7 @@
 			?>
 			
 			
-			<form action="" method="POST">
+			<form action="" method="POST" id="editausuario">
 				<label> Usuário: </label>
 					<input type="text" placeholder="usuário" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
 				<label> Nome: </label>
