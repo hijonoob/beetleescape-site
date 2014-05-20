@@ -61,7 +61,6 @@ Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [front] Ajuste layout (visão de notícias)
 - [front] Máscara e validação dos campos de cada formulário
 - [front] Confirmação ao deletar usuário e notícias
 - [db] Transformar usuário em índice e único

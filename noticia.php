@@ -22,8 +22,11 @@
 
 			<h2> <?php echo $titulo; ?> </h2>
 			<h3> <?php echo $descricao; ?> </h3>
-			<span class="noticiaautor">Por: <?php echo $autor; ?>. </span> 
-			<span class="noticiadata">Publicada em: <?php echo $data; ?></span> 
+			<hr />
+			<div class="byline">
+				<span class="noticiaautor">Por: <?php echo $autor; ?>. </span> 
+				<span class="noticiadata">Publicada em: <?php echo $data; ?></span> 
+			</div>
 			<p class="noticiatexto"><?php echo $texto; ?></p>
 			<?php
 				if ($titulo == ''){

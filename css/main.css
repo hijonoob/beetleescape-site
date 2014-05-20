@@ -57,6 +57,10 @@ input {
     margin-left: 5%;
 }
 
+.alert {
+    margin-top: 20px;
+}
+
 /* CONTRASTE */
 
 body.contraste,
@@ -105,4 +109,11 @@ body.contraste .rss_icon {
     padding-top: 5px;
     height: 24px;
 }
-    
+
+/* visão de notícia */
+
+.byline {
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
