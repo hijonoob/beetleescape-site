@@ -50,26 +50,26 @@ Funcionalidades
 - Exibição das últimas 5 notícias no rodapé
 - Gerador de xml em formato RSS com as últimas 5 notícias para feed
 - TinyMCE como editor de texto das notícias
+- Autofocus no primeiro campo de cada formulário via HTML5
+- Criação de notícia preenche a data do dia automaticamente
 
 
 Issues
 -----------------
 
-- Popular com conteúdo
-- Ajuste layout (rodapé, notícias)
-- Ajuste layout (visão de notícias)
-- Capturar data automaticamente
-- Transformar usuário em índice e único
-- Verificar se usuário já existe ao incluir
-- Transformar ID em índice, único e autoincremental
-- Focus no primeiro campo de cada formulário
-- Máscara e validação dos campos de cada formulário
-- Envio de e-mail de contato (criar formulário)
-- Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
-- Tratamento de mais erros no conexão com o banco
-- Tratamento de mais erros nas queries
-- Confirmação ao deletar usuário e notícias
-- Criar classes para pesquisas e atualização do MySQL para reaproveitar o código
+- [conteúdo] Popular com conteúdo
+- [front] Ajuste layout (rodapé, notícias)
+- [front] Ajuste layout (visão de notícias)
+- [db] Transformar usuário em índice e único
+- [db] Verificar se usuário já existe ao incluir
+- [db] Transformar ID em índice, único e autoincremental
+- [front] Máscara e validação dos campos de cada formulário
+- [back] Envio de e-mail de contato (criar formulário)
+- [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
+- [back] Tratamento de mais erros no conexão com o banco
+- [back] Tratamento de mais erros nas queries
+- [front] Confirmação ao deletar usuário e notícias
+- [back] Criar classes para pesquisas e atualização do MySQL para reaproveitar o código
 
 Versão
 -------------------

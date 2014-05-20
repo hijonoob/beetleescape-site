@@ -39,7 +39,7 @@
 				<label for="autor"> Autor: </label>
 					<input type="text" placeholder="autor da notícia" class="form-control" name="autor" />
 				<label for="data"> Data: </label>
-					<input type="text" placeholder="data da notícia" class="form-control" name="data" />
+					<input type="text" placeholder="data da notícia" class="form-control" name="data" <?php date_default_timezone_set('brazil/east'); echo 'value="' . date('d/m/Y', time()) . '"'; ?> />
 				<label for="texto"> Texto: </label>
 					<textarea class="form-control" name="texto" placeholder="texto da notícia"></textarea>
 
