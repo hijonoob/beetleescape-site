@@ -2,7 +2,7 @@
       <div class="jumbotron footer" id="arodape">
           <div class="container">
               <div class="col-md-8" id="mailing-form" >
-                <h2>Últimas novidades do Beetle Escape! <a href="rss.php"><img src="images/rss_48.png" alt="Assine nosso RSS" height="24" width="24"></a></h2>
+                <h2>Últimas novidades do Beetle Escape!</h2>
                 <div class="listanoticia">
 
                   <dl class="dl-horizontal">
@@ -16,6 +16,7 @@
                     ?>
                   </dl>
                 </div>
+                <h5><a class="rss_icon" href="rss.php">Assine nosso RSS</a></h5>
               </div>
               <div class="col-md-4">
                   <h3>Hijonoob Game Studios</h3><br>

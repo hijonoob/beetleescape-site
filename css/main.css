@@ -87,7 +87,22 @@ body.contraste .alert-info,
 body.contraste .alert-warning,
 body.contraste .alert-success,
 body.contraste .alert-danger {
-background-color: #000 !important;
-border-color: #FFF;
-color: #FFF !important;
+    background-color: #000 !important;
+    border-color: #FFF;
+    color: #FFF !important;
 }
+
+body.contraste .rss_icon {
+    background-image: url(../images/rss_24_contraste.png);
+}
+
+/* ícone rss */
+.rss_icon {
+    display: block;
+    background: transparent url("../images/rss_24.png") no-repeat;
+    margin: 0;
+    padding-left: 30px;
+    padding-top: 5px;
+    height: 24px;
+}
+    
