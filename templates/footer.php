@@ -2,20 +2,7 @@
       <div class="jumbotron footer" id="arodape">
           <div class="container">
               <div class="col-md-8" id="mailing-form" >
-              <!--
-              <h2>Receba as novidades do Beetle Escape!</h2>
-              <form action="#" method="post">
-              <div class="form-input mailing">
-                  <label for="inputNome">Nome</label>
-                  <input type="text" class="form-control" id="inputNome" placeholder="Digite seu nome"></input><br>              
-              </div>        
-              <div class="form-input mailing">
-                  <label for="inputEmail">Email</label>
-                  <input type="email" class="form-control" id="inputNome" placeholder="Digite seu email"></input>              
-              </div> 
-              </form>
-              -->
-                <h2>Últimas novidades do Beetle Escape!</h2>
+                <h2>Últimas novidades do Beetle Escape! <a href="rss.php"><img src="images/rss_48.png" alt="Assine nosso RSS" height="24" width="24"></a></h2>
                 <div class="listanoticia">
 
                   <dl class="dl-horizontal">
@@ -28,9 +15,6 @@
                       }
                     ?>
                   </dl>
-                </div>
-                <div class="rss">
-                  <a href="rss.php">Assine nosso RSS</a>
                 </div>
               </div>
               <div class="col-md-4">

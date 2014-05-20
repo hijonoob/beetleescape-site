@@ -59,7 +59,6 @@ Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [front] Ajuste layout (rodapé, notícias)
 - [front] Ajuste layout (visão de notícias)
 - [front] Ajustar tipos de alerta do bootstrap (alert-success, alert-info, alert-warning e alert-danger)
 - [front] Máscara e validação dos campos de cada formulário

@@ -41,5 +41,18 @@ input {
 }
 
 #acessibilidade {
-font-size: 0.8em;
+    font-size: 0.8em;
+}
+
+.dl-horizontal dt {
+    text-align: left;
+    width: 13%;
+}
+
+.dl-horizontal dd {
+    margin-left: 0;
+}
+
+.footer h2 img {
+    margin-left: 5%;
 }
