@@ -56,3 +56,29 @@ input {
 .footer h2 img {
     margin-left: 5%;
 }
+
+/* CONTRASTE */
+
+body.contraste,
+body.contraste .navbar,
+body.contraste .container,
+body.contraste .footer {
+    background: #000 !important;
+    color: #fff !important;
+}
+body.contraste .navbar-default .navbar-brand,
+body.contraste .navbar-default .navbar-nav>li>a:hover,
+body.contraste .navbar-default .navbar-nav>li>a:focus,
+body.contraste .navbar-default .navbar-nav>li>a,
+body.contraste a {
+    color: #fff !important;
+}
+
+body.contraste .footer {
+    border-top: 1px solid #FFF;
+}
+
+body.contraste .table-striped>tbody>tr:nth-child(odd)>td,
+body.contraste .table-striped>tbody>tr:nth-child(odd)>th {
+    background-color: #222;
+}
