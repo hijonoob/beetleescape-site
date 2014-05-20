@@ -13,7 +13,7 @@
 						$idAntiga = $id;
 						$sql->fetch();
 						if ($titulo == ''){
-							echo "<div class='alert alert-info'> Notícia não encontrada </div>";
+							echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 						}
 						$sql->close();
 					}
@@ -27,7 +27,7 @@
 			<p class="noticiatexto"><?php echo $texto; ?></p>
 			<?php
 				if ($titulo == ''){
-					echo "<div class='alert alert-info'> Notícia não encontrada </div>";
+					echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 				}
 			?>
 

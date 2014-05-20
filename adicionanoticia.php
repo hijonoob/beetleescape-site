@@ -15,12 +15,12 @@
 					$texto = $_POST['texto'];
 					
 					if ($id=='' || $titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
-						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
 						$param = $conexao->prepare("INSERT INTO noticias(id, titulo, descricao, autor, data, texto) VALUES (?, ?, ?, ?, ?, ?)");
 						$param->bind_param('isssss', $id, $titulo, $descricao, $autor, $data, $texto);
 						if ($param->execute()) {
-							echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
 							$param->close();
 						}
 					}

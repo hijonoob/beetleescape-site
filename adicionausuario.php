@@ -16,9 +16,9 @@
 					$permissao = $_POST['permissao'];
 					
 					if ($usuario=='' || $nome=='' || $email=='' || $senha=='' || $senhaconfirma=='' || $permissao=='') {
-						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else if (!$senha == $senhaconfirma){
-						echo "<div class='alert alert-info'> Senha de confirmação diferente da senha. </div>";
+						echo "<div class='alert alert-warning'> Senha de confirmação diferente da senha. </div>";
 					} else {
 						if (!is_numeric ($permissao) || $permissao > 3 || $permissao < 0){
 							$permissao=0;
@@ -29,7 +29,7 @@
 						$senha = crypt($senha);
 						$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
 						if ($param->execute()) {
-							echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
 							$param->close();
 						}
 					}

@@ -11,11 +11,11 @@
           $securimage = new Securimage();
           if ($securimage->check($_POST['captcha_code']) == false) {
             // captcha errado
-            echo "<div class='alert alert-info'> Captcha incorreto, favor tentar novamente. </div>";
+            echo "<div class='alert alert-warning'> Captcha incorreto, favor tentar novamente. </div>";
           } else {
             // captcha certo - verificar senha
               if ($usuario=='' || $senha=='') {
-                echo "<div class='alert alert-info'> Usuário e senha devem ser preenchidos. </div>";
+                echo "<div class='alert alert-warning'> Usuário e senha devem ser preenchidos. </div>";
               } else {
                 if ($sql = $conexao->prepare("SELECT senha, permissao FROM usuarios WHERE usuario = ?")) {
                   $sql->bind_param('s', $usuario);
@@ -23,7 +23,7 @@
                   $sql->bind_result($senhacomparacao, $permissao);
                   $sql->fetch();
                   if ($senhacomparacao == ''){
-                    echo "<div class='alert alert-info'> Erro ao conectar, favor tentar novamente </div>"; // Usuário não encontrado
+                    echo "<div class='alert alert-danger'> Erro ao conectar, favor tentar novamente </div>"; // Usuário não encontrado
                   } else {
                       $senhacomp = crypt($senha, $senhacomparacao);
                       if($senhacomparacao == $senhacomp) {
@@ -33,7 +33,7 @@
                         header('Location: login.php');
                         exit;
                       } else {
-                          echo "<div class='alert alert-info'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
+                          echo "<div class='alert alert-danger'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
 
                       }
                   }
@@ -43,7 +43,7 @@
           }
         }
       if(isset($_SESSION['permissao'])) {
-        echo "<div class='alert alert-info'>Você está logado </div>";
+        echo "<div class='alert alert-success'>Você está logado </div>";
       }
       ?>
       <div id="login">

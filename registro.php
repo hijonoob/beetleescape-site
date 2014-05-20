@@ -15,16 +15,16 @@
 					$senhaconfirma = $_POST['senhaconfirma'];
 					$permissao = 0;
 					if ($usuario=='' || $nome=='' || $email=='' || $senha=='' || $senhaconfirma=='') {
-						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else if (!$senha == $senhaconfirma){
-						echo "<div class='alert alert-info'> Senha de confirmação diferente da senha. </div>";
+						echo "<div class='alert alert-warning'> Senha de confirmação diferente da senha. </div>";
 					} else {
 						$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome,email,senha, permissao) VALUES (?, ?, ?, ?, ?)");
 						// criptografa a senha
 						$senha = crypt($senha);
 						$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
 						if ($param->execute()) {
-							echo "<div class='alert alert-info'> Inclusão efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
 							$param->close();
 						}
 					}

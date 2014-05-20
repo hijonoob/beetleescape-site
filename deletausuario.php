@@ -15,20 +15,20 @@
 						$sql->fetch();
 						$sql->close();
 						if ($nome == ''){
-							echo "<div class='alert alert-info'> Usuário não encontrado </div>";
+							echo "<div class='alert alert-warning'> Usuário não encontrado </div>";
 						} else {
 								if ($sql = $conexao->prepare("DELETE FROM usuarios WHERE usuario=?")) {
 									$sql->bind_param('s', $usuario);
 									$sql->execute();
 									$sql->close();
-									echo "<div class='alert alert-info'> Usuário removido </div>";
+									echo "<div class='alert alert-success'> Usuário removido </div>";
 								} else {
-									echo "<div class='alert alert-info'> Erro ao deletar usuário </div>";
+									echo "<div class='alert alert-danger'> Erro ao deletar usuário </div>";
 								}
 						}
 					}
 				} else {
-					echo "<div class='alert alert-info'> Usuário não encontrado </div>";
+					echo "<div class='alert alert-warning'> Usuário não encontrado </div>";
 				}
 			 ?>
 

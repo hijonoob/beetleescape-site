@@ -15,7 +15,7 @@
 						$idAntiga = $id;
 						$sql->fetch();
 						if ($titulo == ''){
-							echo "<div class='alert alert-info'> Notícia não encontrada </div>";
+							echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 						} else {
 							echo "<div class='alert alert-info'> Notícia encontrada: ID ". $id . "</div>";
 						}
@@ -31,12 +31,12 @@
 					$texto = trim($_POST['texto']);
 					
 					if ($id=='' || $titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
-						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
 						$param = $conexao->prepare("UPDATE noticias SET id = ?, titulo = ?,descricao = ?, autor = ?, data = ?, texto = ? WHERE id = ?");
 						$param->bind_param('isssssi', $id, $titulo, $descricao, $autor, $data, $texto, $idAntiga);
 						if ($param->execute()) {
-							echo "<div class='alert alert-info'> Alteração efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
 							$param->close();
 						}
 					}

@@ -82,3 +82,12 @@ body.contraste .table-striped>tbody>tr:nth-child(odd)>td,
 body.contraste .table-striped>tbody>tr:nth-child(odd)>th {
     background-color: #222;
 }
+
+body.contraste .alert-info,
+body.contraste .alert-warning,
+body.contraste .alert-success,
+body.contraste .alert-danger {
+background-color: #000 !important;
+border-color: #FFF;
+color: #FFF !important;
+}

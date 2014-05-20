@@ -15,7 +15,7 @@
 						$usuarioAntigo = $usuario;
 						$sql->fetch();
 						if ($nome == ''){
-							echo "<div class='alert alert-info'> Usuário não encontrado </div>";
+							echo "<div class='alert alert-warning'> Usuário não encontrado </div>";
 						} else {
 							echo "<div class='alert alert-info'> Usuário encontrado: ". $nome . "</div>";
 						}
@@ -30,7 +30,7 @@
 					$permissao = $_POST['permissao'];
 					
 					if ($usuario=='' || $nome=='' || $email=='' || $permissao=='') {
-						echo "<div class='alert alert-info'> Todos os campos devem ser preenchidos. </div>";
+						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
 						if (!is_numeric ($permissao) || $permissao > 3 || $permissao < 0){
 							$permissao=0;
@@ -38,7 +38,7 @@
 						$param = $conexao->prepare("UPDATE usuarios SET usuario = ?, nome = ?,email = ?, permissao=? WHERE usuario = ?");
 						$param->bind_param('sssis', $usuario, $nome, $email, $permissao, $usuarioAntigo);
 						if ($param->execute()) {
-							echo "<div class='alert alert-info'> Alteração efetuada com sucesso. </div>";
+							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
 							$param->close();
 						}
 					}

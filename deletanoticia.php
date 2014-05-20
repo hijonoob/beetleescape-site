@@ -15,20 +15,20 @@
 						$sql->fetch();
 						$sql->close();
 						if ($titulo == ''){
-							echo "<div class='alert alert-info'> Notícia não encontrada </div>";
+							echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 						} else {
 								if ($sql = $conexao->prepare("DELETE FROM noticias WHERE id=?")) {
 									$sql->bind_param('i', $id);
 									$sql->execute();
 									$sql->close();
-									echo "<div class='alert alert-info'> Notícia removida </div>";
+									echo "<div class='alert alert-success'> Notícia removida </div>";
 								} else {
-									echo "<div class='alert alert-info'> Erro ao deletar notícia </div>";
+									echo "<div class='alert alert-danger'> Erro ao deletar notícia </div>";
 								}
 						}
 					}
 				} else {
-					echo "<div class='alert alert-info'> Notícia não encontrada </div>";
+					echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 				}
 			 ?>
 
