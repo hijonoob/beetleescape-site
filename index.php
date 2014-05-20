@@ -21,4 +21,5 @@
               </div>
           </div>
       </div>
+      <div class="push"></div>
 <?php include 'templates/footer.php' ?>
