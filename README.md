@@ -53,6 +53,7 @@ Funcionalidades
 - Autofocus no primeiro campo de cada formulário via HTML5
 - Criação de notícia preenche a data do dia automaticamente
 - Links com tecla de atalho para menu, conteúdo e rodapé
+- Regra de alto contraste - funcionalidade, cookie e CSS
 
 
 Issues
