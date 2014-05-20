@@ -69,6 +69,7 @@ Issues
 - Tratamento de mais erros no conexão com o banco
 - Tratamento de mais erros nas queries
 - Confirmação ao deletar usuário e notícias
+- Criar classes para pesquisas e atualização do MySQL para reaproveitar o código
 
 Versão
 -------------------
