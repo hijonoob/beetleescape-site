@@ -55,7 +55,8 @@ Funcionalidades
 - Links com tecla de atalho para menu, conteúdo e rodapé
 - Regra de alto contraste - funcionalidade, cookie e CSS
 - Aplicação de tipos de alerta de acordo com ação (alert-success, alert-info, alert-warning e alert-danger)
-- Validação dos campos de todos os formulários
+- Validação dos campos de todos os formulários no navegador
+- Validação de preenchimento de campos e igualdade de senhas no servidor
 
 
 Issues
