@@ -57,13 +57,14 @@ Funcionalidades
 - Aplicação de tipos de alerta de acordo com ação (alert-success, alert-info, alert-warning e alert-danger)
 - Validação dos campos de todos os formulários no navegador
 - Validação de preenchimento de campos e igualdade de senhas no servidor
+- Confirmação antes de remover permanentemente usuário
+- Confirmação antes de remover permanentemente notícias
 
 
 Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [front] Confirmação ao deletar usuário e notícias
 - [db] Transformar usuário em índice e único
 - [db] Verificar se usuário já existe ao incluir
 - [db] Transformar ID em índice, único e autoincremental

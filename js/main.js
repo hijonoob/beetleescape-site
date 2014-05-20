@@ -4,6 +4,25 @@ tinyMCE.init({
         mode : "textareas"
 });
 
+// confirmação de removação de usuário - visão de listagem de usuários
+jQuery(function() {
+  $('.removeusuario').click(
+    function(e) {
+      return confirm("Confirma remover usuário?");
+    }
+  )
+});
+
+// confirmação de removação de notícia - visão de listagem de notícias
+jQuery(function() {
+  $('.removenoticia').click(
+    function(e) {
+      return confirm("Confirma remover usuário?");
+    }
+  )
+});
+
+// Ativação de contraste
 jQuery(function() {
   $('#acao-contraste a').click(
     function(e) {
@@ -170,9 +189,8 @@ jQuery(function() {
         }
     }
 
-    //when the dom has loaded setup form validation rules
+    //inicia validação após carregamento do dom
     $(D).ready(function($) {
         validacao.util.setupFormValidation();
     });
-
 })(jQuery, window, document);
