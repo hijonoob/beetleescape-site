@@ -20,6 +20,11 @@
 		            <span>3</span>
 		        </a>
 		    </li>
+		    <li id="acao-contraste">
+		    	<a href="#" title="Alto Contraste" accesskey="4">
+		    		Alto Contraste
+		    	</a>
+		    </li>
 		</ul>
 
 	    <a class="navbar-brand" href="index.php">Beetle Escape</a>
