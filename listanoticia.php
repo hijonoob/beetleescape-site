@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checagestao.php';
 ?>
-		  	<div class="container">
 			<h3> Lista notícias </h3>
 			<table class="table table-striped" width="647">
 				<thead>

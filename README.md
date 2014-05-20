@@ -52,6 +52,7 @@ Funcionalidades
 - TinyMCE como editor de texto das notícias
 - Autofocus no primeiro campo de cada formulário via HTML5
 - Criação de notícia preenche a data do dia automaticamente
+- Links com tecla de atalho para menu, conteúdo e rodapé
 
 
 Issues
@@ -60,15 +61,16 @@ Issues
 - [conteúdo] Popular com conteúdo
 - [front] Ajuste layout (rodapé, notícias)
 - [front] Ajuste layout (visão de notícias)
+- [front] Ajustar tipos de alerta do bootstrap (alert-success, alert-info, alert-warning e alert-danger)
+- [front] Máscara e validação dos campos de cada formulário
+- [front] Confirmação ao deletar usuário e notícias
 - [db] Transformar usuário em índice e único
 - [db] Verificar se usuário já existe ao incluir
 - [db] Transformar ID em índice, único e autoincremental
-- [front] Máscara e validação dos campos de cada formulário
 - [back] Envio de e-mail de contato (criar formulário)
 - [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
 - [back] Tratamento de mais erros no conexão com o banco
 - [back] Tratamento de mais erros nas queries
-- [front] Confirmação ao deletar usuário e notícias
 - [back] Criar classes para pesquisas e atualização do MySQL para reaproveitar o código
 
 Versão

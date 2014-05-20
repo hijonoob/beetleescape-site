@@ -1,5 +1,5 @@
       <div class="push"></div>
-      <div class="jumbotron footer">
+      <div class="jumbotron footer" id="arodape">
           <div class="container">
               <div class="col-md-8" id="mailing-form" >
               <!--

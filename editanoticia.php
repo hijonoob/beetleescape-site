@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checagestao.php';
 ?>
-		  	<div class="container">
 			<h3> Editar notícia </h3>
 			
 			<?php

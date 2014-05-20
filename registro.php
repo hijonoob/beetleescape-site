@@ -1,7 +1,6 @@
 <?php
 	include 'templates/header.php';
 ?>
-		  	<div class="container">
 			<h3> Cadastre-se no site do Beetle Escape </h3>
 			<p> O jogador cadastrado no site do Beetle Escape possui acesso a conteúdo extra, informações relevantes e direito a voto. </p>
 			

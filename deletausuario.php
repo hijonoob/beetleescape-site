@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checaadmin.php';
 ?>
-		  	<div class="container">
 			<h3> Remoção de usuário </h3>
 			<?php
 			

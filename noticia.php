@@ -2,7 +2,6 @@
 	include 'templates/header.php';
 	include 'templates/checagestao.php';
 ?>
-		  	<div class="container">
 			<?php
 				include 'restrito/conexao.php';
 				$id = htmlspecialchars($_GET["id"]);

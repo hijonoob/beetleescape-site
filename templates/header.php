@@ -43,3 +43,4 @@ tinyMCE.init({
           }
       }
     ?>
+      <div class="container" id="aconteudo">

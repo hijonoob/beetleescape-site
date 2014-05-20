@@ -1,5 +1,5 @@
 <?php include 'templates/header.php' ?>
-
+      </div>
       <div class="jumbotron">
           <div class="container">
               <h1>Beetle Escape</h1>

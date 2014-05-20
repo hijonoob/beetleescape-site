@@ -32,20 +32,14 @@ html, body {
     background-color: #eee;
 }
 #login {
-    margin: 50px auto;
+    margin: 40px auto;
     width: 30%;
 }
 
-.login-form {
-    width: 250px;
-}
-
-.mailing {
-    width: 450px;
-}
-
-
-
 input {
     margin-bottom: 5px;
+}
+
+#acessibilidade {
+font-size: 0.8em;
 }

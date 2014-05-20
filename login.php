@@ -1,6 +1,5 @@
 <?php include 'templates/header.php' ?>
 
-  <div class="container">
       <?php
         include 'restrito/conexao.php';
         
