@@ -19,13 +19,24 @@
 					} else if (!$senha == $senhaconfirma){
 						echo "<div class='alert alert-warning'> Senha de confirmação diferente da senha. </div>";
 					} else {
-						$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome,email,senha, permissao) VALUES (?, ?, ?, ?, ?)");
-						// criptografa a senha
-						$senha = crypt($senha);
-						$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
-						if ($param->execute()) {
-							echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
-							$param->close();
+						if ($sql = $conexao->prepare("SELECT nome FROM usuarios WHERE usuario = ?")) {
+							$sql->bind_param('s', $usuario);
+							$sql->execute();
+							$sql->bind_result($nomeBase);
+							$sql->fetch();
+							$sql->close();
+							if ($nomeBase == ''){
+								$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome, email, senha, permissao) VALUES (?, ?, ?, ?, ?)");
+								// criptografa a senha
+								$senha = crypt($senha);
+								$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
+								if ($param->execute()) {
+									echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
+									$param->close();
+								}
+							} else {
+								echo "<div class='alert alert-warning'> Usuário já existente, favor escolher outro usuário </div>";
+							}
 						}
 					}
 				endif;
@@ -33,12 +44,13 @@
 			
 			
 			<form action="" method="POST" id="registro">
+			<?php if($usuario=='root'){$usuario='';} ?>
 				<label> Usuário: </label>
-					<input type="text" placeholder="usuário" class="form-control" name="usuario" autofocus />
+					<input type="text" placeholder="usuário" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
 				<label> Nome: </label>
-					<input type="text" placeholder="nome completo" class="form-control" name="nome" />
+					<input type="text" placeholder="nome completo" class="form-control" value=<?php echo "'". $nome . "'"; ?> name="nome" />
 				<label> E-mail: </label>
-				<input type="text" placeholder="e-mail" class="form-control" name="email" />
+				<input type="text" placeholder="e-mail" class="form-control" value=<?php echo "'". $email . "'"; ?> name="email" />
 				<label> Senha: </label>
 					<input type="password" placeholder="senha" class="form-control" name="senha" id="senha" />
 				<label> Confirmar senha: </label>

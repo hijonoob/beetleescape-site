@@ -59,6 +59,7 @@ Funcionalidades
 - Validação de preenchimento de campos e igualdade de senhas no servidor
 - Confirmação antes de remover permanentemente usuário
 - Confirmação antes de remover permanentemente notícias
+- Verificação de usuário existente antes de incluir e preenchimento dos campos no caso de erro (registro e gestão de usuário)
 
 
 Issues
@@ -66,7 +67,7 @@ Issues
 
 - [conteúdo] Popular com conteúdo
 - [db] Transformar usuário em índice e único
-- [db] Verificar se usuário já existe ao incluir
+- [db] verificar se usuário existe no formuĺário de edição de usuários
 - [db] Transformar ID em índice, único e autoincremental
 - [back] Envio de e-mail de contato (criar formulário)
 - [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
