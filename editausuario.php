@@ -49,7 +49,7 @@
 			
 			<form action="" method="POST">
 				<label> Usuário: </label>
-					<input type="text" placeholder="usuário" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> />
+					<input type="text" placeholder="usuário" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
 				<label> Nome: </label>
 					<input type="text" placeholder="nome completo" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; ?>/>
 				<label> E-mail: </label>

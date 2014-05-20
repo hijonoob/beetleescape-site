@@ -51,7 +51,7 @@
           <form action="login.php" method="post">  
             <div class="form-input login-form" >
                 <label for="usuario">Usuário</label>
-                <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Digite seu nome de usuário"></input>
+                <input name="usuario" type="text" class="form-control" id="usuario" placeholder="Digite seu nome de usuário" autofocus></input>
             </div>
             <div class="form-input login-form">
                 <label for="senha">Senha</label>

@@ -35,7 +35,7 @@
 			
 			<form action="" method="POST">
 				<label> Usuário: </label>
-					<input type="text" placeholder="usuário" class="form-control" name="usuario" />
+					<input type="text" placeholder="usuário" class="form-control" name="usuario" autofocus />
 				<label> Nome: </label>
 					<input type="text" placeholder="nome completo" class="form-control" name="nome" />
 				<label> E-mail: </label>
