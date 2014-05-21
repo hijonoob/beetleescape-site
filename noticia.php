@@ -1,6 +1,5 @@
 <?php
 	include 'templates/header.php';
-	include 'templates/checagestao.php';
 ?>
 			<?php
 				include 'restrito/conexao.php';
