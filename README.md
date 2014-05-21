@@ -15,6 +15,20 @@ Ferramentas
 O site foi desenvolvido em PHP, MySQL e Bootstrap.
 
 
+Instalação
+--------------
+
+- Copie todos os arquivos do projeto na raiz do diretório de publicação:
+	- É possível clonar o repositório pelo link: https://github.com/hijonoob/beetleescape-site.git
+	- É possível baixar o projeto compactado pelo link: https://github.com/hijonoob/beetleescape-site/archive/master.zip
+- Crie um banco de dados "beetleescape"
+- Execute o arquivo beetleescape.sql no seu banco de dados beetleescape
+- Coloque o seu usuário e senha no arquivo 'restrito/conexao.php'
+- Logue no site com usuário 'admin' e senha '12345'
+- Edite seus usuários e senhas
+- Aproveite o site!
+
+
 Senhas no repositório
 -------------------------
 
