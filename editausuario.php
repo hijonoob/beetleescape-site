@@ -12,31 +12,29 @@
 						$sql->bind_param('s', $usuario);
 						$sql->execute();
 						$sql->bind_result($nome, $email, $permissao);
-						$usuarioAntigo = $usuario;
 						$sql->fetch();
 						if ($nome == ''){
 							echo "<div class='alert alert-warning'> Usuário não encontrado </div>";
 						} else {
-							echo "<div class='alert alert-info'> Usuário encontrado: ". $nome . "</div>";
+							echo "<div class='alert alert-info'> Usuário encontrado: ". $usuario . "</div>";
 						}
 						$sql->close();
 					}
 				}
 				
 				if( isset( $_POST['editar'] ) ):
-					$usuario = $_POST['usuario'];
 					$nome = $_POST['nome'];
 					$email = $_POST['email'];
 					$permissao = $_POST['permissao'];
 					
-					if ($usuario=='' || $nome=='' || $email=='' || $permissao=='') {
+					if ($nome=='' || $email=='' || $permissao=='') {
 						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
 						if (!is_numeric ($permissao) || $permissao > 3 || $permissao < 0){
 							$permissao=0;
 						}
-						$param = $conexao->prepare("UPDATE usuarios SET usuario = ?, nome = ?,email = ?, permissao=? WHERE usuario = ?");
-						$param->bind_param('sssis', $usuario, $nome, $email, $permissao, $usuarioAntigo);
+						$param = $conexao->prepare("UPDATE usuarios SET nome = ?,email = ?, permissao=? WHERE usuario = ?");
+						$param->bind_param('ssis', $nome, $email, $permissao, $usuario);
 						if ($param->execute()) {
 							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
 							$param->close();
@@ -47,10 +45,8 @@
 			
 			
 			<form action="" method="POST" id="editausuario">
-				<label> Usuário: </label>
-					<input type="text" placeholder="usuário" class="form-control" name="usuario" value=<?php echo "'". $usuario . "'"; ?> autofocus />
 				<label> Nome: </label>
-					<input type="text" placeholder="nome completo" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; ?>/>
+					<input type="text" placeholder="nome completo" class="form-control" name="nome" value=<?php echo "'". $nome . "'"; autofocus ?>/>
 				<label> E-mail: </label>
 				<input type="text" placeholder="e-mail" class="form-control" name="email" value=<?php echo "'". $email . "'"; ?>/>
 				<label> Permissão: </label>

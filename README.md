@@ -67,7 +67,6 @@ Issues
 
 - [conteúdo] Popular com conteúdo
 - [db] Transformar usuário em índice e único
-- [db] verificar se usuário existe no formuĺário de edição de usuários
 - [db] Transformar ID em índice, único e autoincremental
 - [back] Envio de e-mail de contato (criar formulário)
 - [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
