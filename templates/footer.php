@@ -10,7 +10,7 @@
                       $resultado = $conexao->query("SELECT titulo, autor, data, id FROM noticias ORDER BY data DESC LIMIT 5");
                       while ($linha = $resultado->fetch_assoc()){
                         echo '<dt>' . $linha['data'] . '</dt>';
-                        echo '<dd> <a href="noticia.php?id=' . $linha['id'] . '">' . $linha['titulo'] .' por '. $linha['autor'] .' </a></dd>';
+                        echo '<dd> <a href="noticia.php?id=' . $linha['id'] . '">' . $linha['titulo'] .'</a> por '. $linha['autor'] .'</dd>';
                       }
                     ?>
                   </dl>
