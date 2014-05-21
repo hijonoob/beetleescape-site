@@ -24,7 +24,7 @@ Instalação
 - Crie um banco de dados "beetleescape"
 - Execute o arquivo beetleescape.sql no seu banco de dados beetleescape
 - Coloque o seu usuário e senha no arquivo 'restrito/conexao.php'
-- Logue no site com usuário 'admin' e senha '12345'
+- Logue no site com usuário 'administrador' e senha '12345'
 - Edite seus usuários e senhas
 - Aproveite o site!
 
