@@ -65,6 +65,18 @@ input {
     margin-top: 15px;
 }
 
+/* FAQ */
+
+.accordion-toggle {
+	font-weight: bold;
+}
+
+.accordion-group {
+	margin-bottom: 10px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
 /* CONTRASTE */
 
 body.contraste,
@@ -74,6 +86,20 @@ body.contraste .footer,
 body.contraste .form-control {
     background: #000 !important;
     color: #fff !important;
+}
+
+body.contraste .jumbotron {
+	background: #000;
+	border-bottom: 1px solid #fff;
+}
+
+body.contraste .btn.btn-lg.btn-primary {
+	background: #000;
+	border-color: #FFF;
+}
+
+body.contraste input[type="text"] {
+	color: #000;
 }
 
 body.contraste .form-control.error {
