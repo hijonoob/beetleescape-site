@@ -7,18 +7,17 @@
 			<?php
 				include 'restrito/conexao.php';
 				if( isset( $_POST['criar'] ) ):
-					$id = $_POST['id']; 
 					$titulo = $_POST['titulo'];
 					$descricao = $_POST['descricao'];
 					$autor = $_POST['autor'];
 					$data = $_POST['data'];
 					$texto = $_POST['texto'];
 					
-					if ($id=='' || $titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
+					if ($titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
 						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
-						$param = $conexao->prepare("INSERT INTO noticias(id, titulo, descricao, autor, data, texto) VALUES (?, ?, ?, ?, ?, ?)");
-						$param->bind_param('isssss', $id, $titulo, $descricao, $autor, $data, $texto);
+						$param = $conexao->prepare("INSERT INTO noticias(titulo, descricao, autor, data, texto) VALUES (?, ?, ?, ?, ?)");
+						$param->bind_param('sssss', $titulo, $descricao, $autor, $data, $texto);
 						if ($param->execute()) {
 							echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
 							$param->close();
@@ -29,10 +28,8 @@
 			
 			
 			<form action="" method="POST" id="adicionanoticia">
-				<label for="id"> Id: </label>
-					<input type="text" placeholder="id" class="form-control" name="id" autofocus />
 				<label for="titulo"> Título: </label>
-					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" />
+					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" autofocus />
 				<label for="descricao"> Descrição: </label>
 					<input type="text" placeholder="descrição da notícia" class="form-control" name="descricao" />
 				<label for="autor"> Autor: </label>

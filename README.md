@@ -60,14 +60,19 @@ Funcionalidades
 - Confirmação antes de remover permanentemente usuário
 - Confirmação antes de remover permanentemente notícias
 - Verificação de usuário existente antes de incluir e preenchimento dos campos no caso de erro (registro e gestão de usuário)
+- Define ID de notícia em índice, único e auto incremental
+- Define usuario de Usuário em índice e único
 
 
 Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [db] Transformar usuário em índice e único
-- [db] Transformar ID em índice, único e autoincremental
+- [db] Gerar novo dump após popular o site
+
+Pós-release
+-----------------
+
 - [back] Envio de e-mail de contato (criar formulário)
 - [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
 - [back] Tratamento de mais erros no conexão com o banco

@@ -12,7 +12,6 @@
 						$sql->bind_param('i', $id);
 						$sql->execute();
 						$sql->bind_result($titulo, $descricao, $autor, $data, $texto);
-						$idAntiga = $id;
 						$sql->fetch();
 						if ($titulo == ''){
 							echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
@@ -30,11 +29,11 @@
 					$data = $_POST['data'];
 					$texto = trim($_POST['texto']);
 					
-					if ($id=='' || $titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
+					if ($titulo=='' || $descricao=='' || $autor=='' || $data=='' || $texto=='') {
 						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
 					} else {
-						$param = $conexao->prepare("UPDATE noticias SET id = ?, titulo = ?,descricao = ?, autor = ?, data = ?, texto = ? WHERE id = ?");
-						$param->bind_param('isssssi', $id, $titulo, $descricao, $autor, $data, $texto, $idAntiga);
+						$param = $conexao->prepare("UPDATE noticias SET titulo = ?,descricao = ?, autor = ?, data = ?, texto = ? WHERE id = ?");
+						$param->bind_param('sssssi', $titulo, $descricao, $autor, $data, $texto, $id);
 						if ($param->execute()) {
 							echo "<div class='alert alert-success'> Alteração efetuada com sucesso. </div>";
 							$param->close();
@@ -44,10 +43,8 @@
 			?>
 
 			<form action="" method="POST" id="editanoticia">
-				<label for="id"> Id: </label>
-					<input type="text" placeholder="id" class="form-control" name="id" value=<?php echo "'". $id . "'"; ?> autofocus />
 				<label for="titulo"> Título: </label>
-					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" value=<?php echo "'". $titulo . "'"; ?> />
+					<input type="text" placeholder="título da notícia" class="form-control" name="titulo" value=<?php echo "'". $titulo . "'"; ?> autofocus />
 				<label for="descricao"> Descrição: </label>
 					<input type="text" placeholder="descrição da notícia" class="form-control" name="descricao" value=<?php echo "'". $descricao . "'"; ?> />
 				<label for="autor"> Autor: </label>

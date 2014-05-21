@@ -17,7 +17,7 @@
 				<tbody>
 				<?php
 					include 'restrito/conexao.php';
-						$resultado = $conexao->query("SELECT id, titulo, autor, data FROM noticias");
+						$resultado = $conexao->query("SELECT id, titulo, autor, data FROM noticias ORDER BY id");
 					while ($linha = $resultado->fetch_assoc()){
 						echo '<tr>';
 						echo '<td>' . $linha['id'] . '</td>'; // colocar número de repetição
