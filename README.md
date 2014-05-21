@@ -15,6 +15,15 @@ Ferramentas
 O site foi desenvolvido em PHP, MySQL e Bootstrap.
 
 
+Senhas no repositório
+-------------------------
+
+Como não salvamos senhas em repositórios, seguimos o padrão a seguir:
+
+- Todos os usuários do banco criados com senha: 12345
+- Configuração de conexão de banco com usuário e senha root em localhost
+
+
 Contribuidores
 -----------------
 
@@ -68,7 +77,6 @@ Issues
 -----------------
 
 - [conteúdo] Popular com conteúdo
-- [db] Gerar novo dump após popular o site
 
 Pós-release
 -----------------
