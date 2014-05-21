@@ -31,5 +31,6 @@
 					echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
 				}
 			 ?>
+		</div>
 
 <?php include 'templates/footer.php' ?>

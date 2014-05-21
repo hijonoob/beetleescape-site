@@ -31,5 +31,6 @@
 					echo "<div class='alert alert-warning'> Usuário não encontrado </div>";
 				}
 			 ?>
+		</div>
 
 <?php include 'templates/footer.php' ?>
