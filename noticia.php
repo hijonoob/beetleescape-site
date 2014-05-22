@@ -23,17 +23,10 @@
 			<h3> <?php echo $descricao; ?> </h3>
 			<hr />
 			<div class="byline">
-				<span class="noticiaautor">Por: <?php echo $autor; ?>. </span> 
-				<span class="noticiadata">Publicada em: <?php echo $data; ?></span> 
+				<span class="noticiaautor"><?php if ($titulo != ''){ echo 'Por: ' . $autor . '.'; } ?></span> 
+				<span class="noticiadata"><?php if ($titulo != ''){ echo 'Publicada em: ' . $data; }?></span> 
 			</div>
 			<p class="noticiatexto"><?php echo $texto; ?></p>
-			<?php
-				if ($titulo == ''){
-					echo "<div class='alert alert-warning'> Notícia não encontrada </div>";
-				}
-			?>
-
-
 		</div>	
 
 <?php include 'templates/footer.php' ?>

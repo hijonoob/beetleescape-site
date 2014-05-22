@@ -1,6 +1,6 @@
 <?php
 	include 'templates/header.php';
-	include 'templates/checagestao.php';
+	include 'templates/checagestor.php';
 ?>
 			<h3> Editar notícia </h3>
 			
