@@ -1,6 +1,6 @@
 <?php
-	include 'templates/header.php';
 	include 'templates/checagestor.php';
+	include 'templates/header.php';
 ?>
 			<h3> Remoção de notícias </h3>
 			<?php

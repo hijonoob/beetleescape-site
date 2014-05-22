@@ -1,6 +1,6 @@
 <?php
-	include 'templates/header.php';
 	include 'templates/checaadmin.php';
+	include 'templates/header.php';
 ?>
 			<h3> Lista usuários </h3>
 			<table class="table table-striped" width="647">

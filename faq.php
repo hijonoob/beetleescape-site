@@ -1,4 +1,5 @@
 <?php
+	include 'templates/checajogador.php';
 	include 'templates/header.php';
 ?>
 			<h2> FAQ </h2>

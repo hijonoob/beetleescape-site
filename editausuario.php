@@ -1,6 +1,6 @@
 <?php
-	include 'templates/header.php';
 	include 'templates/checaadmin.php';
+	include 'templates/header.php';
 ?>
 			<h3> Editar usuário </h3>
 			

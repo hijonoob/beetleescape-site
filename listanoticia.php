@@ -1,6 +1,6 @@
 <?php
-	include 'templates/header.php';
 	include 'templates/checagestor.php';
+	include 'templates/header.php';
 ?>
 			<h3> Lista notícias </h3>
 			<table class="table table-striped" width="647">
