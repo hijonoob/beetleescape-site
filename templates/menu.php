@@ -35,16 +35,11 @@
 			      $permissao = $_SESSION['permissao'];
 			      if($permissao > 0) {
 			        include 'templates/menujogador.php';
-			      }
+			      } else {
+				  	include 'templates/menulogin.php';
+		      	  }
 			  } else {
-			  	echo '
-	          <li>
-	              <a href="login.php">Login</a>
-	          </li>
-	          <li>
-	              <a href="registro.php">Cadastre-se</a>
-	          </li>
-	          ';
+			  	include 'templates/menulogin.php';
 	      	  }
 			?>
 	          
