@@ -30,8 +30,6 @@
                         // logado, cria as sessões
                         $_SESSION['usuario']=$usuario;
                         $_SESSION['permissao']=$permissao;
-                        header('Location: login.php');
-                        exit;
                       } else {
                           echo "<div class='alert alert-danger'>Erro ao conectar, favor tentar novamente </div>"; // senha incorreta
 
@@ -44,6 +42,7 @@
         }
       if(isset($_SESSION['permissao'])) {
         echo "<div class='alert alert-success'>Você está logado </div>";
+        echo "<div class='alert alert-warning'>Recarregue a página para acessar o conteúdo restrito </div>";
       }
       ?>
       <div id="login">
