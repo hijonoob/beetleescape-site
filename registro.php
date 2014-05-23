@@ -14,28 +14,37 @@
 					$senha = $_POST['senha'];
 					$senhaconfirma = $_POST['senhaconfirma'];
 					$permissao = 0;
-					if ($usuario=='' || $nome=='' || $email=='' || $senha=='' || $senhaconfirma=='') {
-						echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
-					} else if (!$senha == $senhaconfirma){
-						echo "<div class='alert alert-warning'> Senha de confirmação diferente da senha. </div>";
+					// validação de captcha
+					include_once 'securimage/securimage.php';
+					$securimage = new Securimage();
+					if ($securimage->check($_POST['captcha_code']) == false) {
+					// captcha errado
+					echo "<div class='alert alert-warning'> Captcha incorreto, favor tentar novamente. </div>";
 					} else {
-						if ($sql = $conexao->prepare("SELECT nome FROM usuarios WHERE usuario = ?")) {
-							$sql->bind_param('s', $usuario);
-							$sql->execute();
-							$sql->bind_result($nomeBase);
-							$sql->fetch();
-							$sql->close();
-							if ($nomeBase == ''){
-								$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome, email, senha, permissao) VALUES (?, ?, ?, ?, ?)");
-								// criptografa a senha
-								$senha = crypt($senha);
-								$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
-								if ($param->execute()) {
-									echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
-									$param->close();
+						// CAPTCHA CORRETO
+						if ($usuario=='' || $nome=='' || $email=='' || $senha=='' || $senhaconfirma=='') {
+							echo "<div class='alert alert-warning'> Todos os campos devem ser preenchidos. </div>";
+						} else if (!$senha == $senhaconfirma){
+							echo "<div class='alert alert-warning'> Senha de confirmação diferente da senha. </div>";
+						} else {
+							if ($sql = $conexao->prepare("SELECT nome FROM usuarios WHERE usuario = ?")) {
+								$sql->bind_param('s', $usuario);
+								$sql->execute();
+								$sql->bind_result($nomeBase);
+								$sql->fetch();
+								$sql->close();
+								if ($nomeBase == ''){
+									$param = $conexao->prepare("INSERT INTO usuarios(usuario, nome, email, senha, permissao) VALUES (?, ?, ?, ?, ?)");
+									// criptografa a senha
+									$senha = crypt($senha);
+									$param->bind_param('ssssi', $usuario, $nome, $email, $senha, $permissao);
+									if ($param->execute()) {
+										echo "<div class='alert alert-success'> Inclusão efetuada com sucesso. </div>";
+										$param->close();
+									}
+								} else {
+									echo "<div class='alert alert-warning'> Usuário já existente, favor escolher outro usuário </div>";
 								}
-							} else {
-								echo "<div class='alert alert-warning'> Usuário já existente, favor escolher outro usuário </div>";
 							}
 						}
 					}
@@ -55,6 +64,15 @@
 					<input type="password" placeholder="senha" class="form-control" name="senha" id="senha" />
 				<label> Confirmar senha: </label>
 					<input type="password" placeholder="repetir senha" class="form-control" name="senhaconfirma" />
+				<div class="form-input login-form">
+	              <label for="captchainput">Digite o Captcha</label>
+	              <br />
+	              <img id="captcha" src="securimage/securimage_show.php" alt="CAPTCHA Image" />
+	              <br />
+	                <input type="text" name="captcha_code" size="10" maxlength="6" />
+	                <br />
+	                <a href="#" onclick="document.getElementById('captcha').src = 'securimage/securimage_show.php?' + Math.random(); return false">Gerar outra imagem</a>
+	            </div>
 				<input type="submit" name="registra" value="Registrar usuário" class="btn btn-default" />	
 			</form>		
 		</div>	

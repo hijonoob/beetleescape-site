@@ -6,7 +6,7 @@
           $usuario = trim(strip_tags($_POST['usuario'])); 
           $senha = trim(strip_tags($_POST['senha']));
           // validar captcha
-          include_once $_SERVER['DOCUMENT_ROOT'] . '/beetleescape/securimage/securimage.php';
+          include_once 'securimage/securimage.php';
           $securimage = new Securimage();
           if ($securimage->check($_POST['captcha_code']) == false) {
             // captcha errado
