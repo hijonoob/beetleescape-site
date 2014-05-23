@@ -27,7 +27,7 @@ html, body {
 
 .footer {
     padding-top: 10px;
-    margin-top: 20px;
+    margin-top: 0px;
     margin-bottom: 0;
     background-color: #eee;
 }
@@ -63,6 +63,12 @@ input {
 
 .btn {
     margin-top: 15px;
+}
+
+#jumbo_chamada {
+    margin-bottom: 0px;
+    background-image: url("../images/jumboground.jpg");
+    height: 584px;
 }
 
 /* FAQ */
@@ -145,6 +151,61 @@ body.contraste .rss_icon {
     padding-left: 30px;
     padding-top: 5px;
     height: 24px;
+}
+
+/* Logo do Jogo */
+.be_logo {
+    display: block;
+    background: transparent url("../images/logo.png") no-repeat 50% 50%;
+    position: relative;
+    height: 326px;
+    text-indent: -99999px;
+    -webkit-background-size: 568px 326px;
+    -moz-background-size: 568px 326px;
+    -o-background-size: 568px 326px;
+    background-size: 568px 326px;
+}
+
+/* texto abaixo do logo */
+#be_chamada {
+    text-align: center;
+    color: white;
+}
+
+/* header de cada divisão do site */
+
+.header_image{
+    text-indent: -99999px;    
+}
+
+#be_jogo{
+    background: transparent url("../images/o_jogo.png") no-repeat;
+    height: 83px;
+}
+#be_imagens{
+    background: transparent url("../images/imagens.png") no-repeat;
+    height: 86px;
+}
+#be_faq{
+    background: transparent url("../images/duvidas.png") no-repeat;
+    height: 111px;
+}
+#be_news{
+    background: transparent url("../images/noticias.png") no-repeat;
+    height: 109px;
+}
+
+/* Home */
+
+.jogo{
+    background-color: rgb(34, 14, 0);
+    width: 100%;
+    color: white;
+}
+
+.be_texto {
+    font-size: 21px;
+    font-weight: 200;   
 }
 
 /* visão de notícia */
