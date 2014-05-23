@@ -1,5 +1,4 @@
 <?php include 'templates/header.php' ?>
-
       <?php
         include 'restrito/conexao.php';
         
@@ -28,6 +27,7 @@
                       $senhacomp = crypt($senha, $senhacomparacao);
                       if($senhacomparacao == $senhacomp) {
                         // logado, cria as sessões
+                        echo $permissao;
                         $_SESSION['usuario']=$usuario;
                         $_SESSION['permissao']=$permissao;
                         echo '<script> location.reload(); </script>';
