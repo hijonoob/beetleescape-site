@@ -14,39 +14,24 @@
     
       <div class="jogo">
           <div class="container">
-            <h2 class="header_image" id="be_jogo">O Jogo</h2>
               <div class="col-md-4"><h2>Pule!</h2>
                   <p class="be_texto">Faça o besouro pular!</p>
+                  <img src="images/beetleCmdPulo.png" alt="demonstração de besouro pulando" />
               </div>
                   <div class="col-md-4"><h2>Desça!</h2>
                     <p class="be_texto">O besouro também pode descer!</p>
+                    <img src="images/beetleCmdCai.png" alt="demonstração de besouro caindo" />
                   </div>
-                  <div class="col-md-4"><h2>Corra!</h2>
+                  <div class="col-md-4"><h2>Entre em Fúria!</h2>
                       <p class="be_texto">O besouro não para de correr!</p>
+                      <img src="images/beetleCmdFuria.png" alt="demonstração de besouro entrando em modo de fúria" />
                   </div>
+                <div class="registrese">
+                  <h3>Cadastre-se agora para ter acesso às informações exclusivo !</h3>
+                  <a href="registro.php" role="button" class="btn btn-lg btn-primary">CADASTRE-SE</a>
+                </div>
+
               </div>
-    
-
-        <div class="container">
-        <h2 class="header_image" id="be_imagens">Imagens</h2>
-            <div class="col-md-4">
-                <img src="images/beetlenail.jpg">
-            </div>
-            <div class="col-md-8">
-                <h3>Baixe o wallpaper do Beetle Escape!</h3>
-                <a href="/images/paper/beetlepaper2560.png">2560x1440</a>
-                <a href="/images/paper/beetlepaper1920.png">1920x1080</a>
-                <a href="/images/paper/beetlepaper1280.png">1280x720</a>                     
-            </div>
-        </div>
-
-    
-
-        <div class="container">
-        <h2 class="header_image" id="be_faq">Dúvidas Frequentes</h2>
-            <h3>P: É só isso que vocês tem no site?</h3>
-            <p class="be_texto">Não, o nosso site tem muito mais! Cadastre-se agora para ter acesso a screenshots, mais wallpapers, suporte e batatas!</p>
-        </div>
-    </div>
+      </div>
 
 <?php include 'templates/footer.php' ?>

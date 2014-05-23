@@ -2,7 +2,7 @@
     margin-bottom: 0
 }
 
-#mailing-form{
+#lastest-news{
     padding-left: 0;
 }
 
@@ -27,7 +27,7 @@ html, body {
 
 .footer {
     padding-top: 10px;
-    margin-top: 0px;
+    margin-top: 20px;
     margin-bottom: 0;
     background-color: #eee;
 }
@@ -89,7 +89,9 @@ body.contraste,
 body.contraste .navbar,
 body.contraste .container,
 body.contraste .footer,
-body.contraste .form-control {
+body.contraste .form-control,
+body.contraste .dropdown .dropdown-toggle,
+body.contraste .dropdown-menu {
     background: #000 !important;
     color: #fff !important;
 }
@@ -102,6 +104,10 @@ body.contraste .jumbotron {
 body.contraste .btn.btn-lg.btn-primary {
 	background: #000;
 	border-color: #FFF;
+}
+
+body.contraste .jogo {
+    background-color: #000;
 }
 
 body.contraste input[type="text"] {
@@ -126,7 +132,8 @@ body.contraste .footer {
 }
 
 body.contraste .table-striped>tbody>tr:nth-child(odd)>td,
-body.contraste .table-striped>tbody>tr:nth-child(odd)>th {
+body.contraste .table-striped>tbody>tr:nth-child(odd)>th,
+body.contraste .dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
     background-color: #222;
 }
 
@@ -137,6 +144,10 @@ body.contraste .alert-danger {
     background-color: #000 !important;
     border-color: #FFF;
     color: #FFF !important;
+}
+
+body.contraste #jumbo_chamada {
+    background: none;
 }
 
 body.contraste .rss_icon {
@@ -160,10 +171,6 @@ body.contraste .rss_icon {
     position: relative;
     height: 326px;
     text-indent: -99999px;
-    -webkit-background-size: 568px 326px;
-    -moz-background-size: 568px 326px;
-    -o-background-size: 568px 326px;
-    background-size: 568px 326px;
 }
 
 /* texto abaixo do logo */
@@ -172,39 +179,29 @@ body.contraste .rss_icon {
     color: white;
 }
 
+.registrese {
+    text-align:  center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    clear: both;
+
+}
+
 /* header de cada divisão do site */
 
 .header_image{
     text-indent: -99999px;    
 }
 
-#be_jogo{
-    background: transparent url("../images/o_jogo.png") no-repeat;
-    height: 83px;
-}
-#be_imagens{
-    background: transparent url("../images/imagens.png") no-repeat;
-    height: 86px;
-}
-#be_faq{
-    background: transparent url("../images/duvidas.png") no-repeat;
-    height: 111px;
-}
-#be_news{
-    background: transparent url("../images/noticias.png") no-repeat;
-    height: 109px;
-}
-
 /* Home */
 
 .jogo{
-    background-color: rgb(34, 14, 0);
     width: 100%;
-    color: white;
+    color: #000 ;
 }
 
 .be_texto {
-    font-size: 21px;
+    font-size: 1.5em;
     font-weight: 200;   
 }
 
@@ -227,4 +224,30 @@ form label.error {
 
 .form-control.error {
     background: #eee;
+}
+
+
+/* Ajuste Responsivo */
+
+@media (max-width: 767px) {
+    .be_logo {
+        display: block;
+        background: transparent url("../images/logo-small.png") no-repeat 50% 50%;
+        position: relative;
+        height: 326px;
+    }
+    #acessibilidade,
+    #lastest-news {
+        display: none;
+    }
+    .navbar-nav {
+        clear:both;
+    }
+    .navbar-brand {
+        padding:15px 0;
+    }
+    .col-md-6 img {
+        width: 350px;
+        height: auto;
+    }
 }

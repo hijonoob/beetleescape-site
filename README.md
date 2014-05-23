@@ -6,7 +6,7 @@ Introdução
 
 Beetle Escape é um Infinite Runner desenvolvido como projeto do curso de Tecnologia em Jogos Digitais da FATEC São Caetano do Sul.
 
-Esse é o projeto de desenvolvimento do site de divulgação do jogo
+Esse é o projeto do site de divulgação do jogo Beetle Escape
 
 
 Ferramentas
@@ -41,17 +41,18 @@ Como não salvamos senhas em repositórios, seguimos o padrão a seguir:
 Contribuidores
 -----------------
 
-O site do Bettle Escape atualmente conta como seu Development Team:
+O site do Beetle Escape atualmente conta como seu Development Team:
 
 - Danilo Sartorelli Barbato
 - Lucas Vinicius Brandt Ferres
 - Maurício Cardozo de Macedo
 - Murilo Brandão Beraldo (artes já existentes do jogo)
+- Josias (tester)
 
 Funcionalidades
 -----------------
 
-- Template baseado em Bootstrap
+- Template baseado em Bootstrap com responsividade
 - Login e logout baseado em sessões
 - Criptografia da senha
 - CRUD básico de usuários
@@ -86,22 +87,7 @@ Funcionalidades
 - Define ID de notícia em índice, único e auto incremental
 - Define usuario de Usuário em índice e único
 
-
-Issues
------------------
-
-- [conteúdo] Popular com conteúdo
-
-Pós-release
------------------
-
-- [back] Envio de e-mail de contato (criar formulário)
-- [back] Envio de e-mail para recuperação de senha (criar formulário e sistema de gerar nova senha)
-- [back] Tratamento de mais erros no conexão com o banco
-- [back] Tratamento de mais erros nas queries
-- [back] Criar classes para pesquisas e atualização do MySQL para reaproveitar o código
-
 Versão
 -------------------
 
-O site está em versão inicial de desenvolvimento, ainda sem release candidate.
+O site está em versão beta.

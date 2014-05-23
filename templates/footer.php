@@ -1,6 +1,6 @@
       <div class="jumbotron footer" id="arodape">
           <div class="container">
-              <div class="col-md-8" id="mailing-form" >
+              <div class="col-md-8" id="lastest-news" >
                 <h2>Últimas novidades do Beetle Escape!</h2>
                 <div class="listanoticia">
 
