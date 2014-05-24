@@ -27,7 +27,7 @@
                       <img src="images/beetleCmdFuria.png" alt="demonstração de besouro entrando em modo de fúria" />
                   </div>
                 <div class="registrese">
-                  <h3>Cadastre-se agora para ter acesso às informações exclusivo !</h3>
+                  <h3>Cadastre-se agora para ter acesso às informações exclusivas !</h3>
                   <a href="registro.php" role="button" class="btn btn-lg btn-primary">CADASTRE-SE</a>
                 </div>
 
